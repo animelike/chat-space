@@ -6,7 +6,7 @@
 |email|string|null: false|
 
 ### Association
-- has_many :group
+- has_many :group, through: :groups_users
 - has_many :message
 
 ## messagesテーブル
@@ -28,7 +28,7 @@
 |member|string|null: false|
 
 ### Association
-- has_many :user
+- has_many :user, through: :groups_users
 - has_many :message
 
 ## groups_usersテーブル
