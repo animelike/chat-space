@@ -1,0 +1,36 @@
+.chat-main
+  .main-header
+    .main-header__group-info
+      .main-header__group-info__group-name
+        vegetable
+      .main-header__group-info__member-name
+        member: tomo
+    =link_to "#", class:"edit-btn" do
+      Edit
+
+  .messages
+    .messages__log-message
+      .messages__log-message__upper-info
+        .messages__log-message__upper-info__talker
+          tomo 
+        .messages__log-message__upper-info__date
+          2020/01/07(Tue) 15:57:00
+      .messages__log-message__text
+        おはようございます
+    .messages__log-message
+      .messages__log-message__upper-info
+        .messages__log-message__upper-info__talker
+          nano 
+        .messages__log-message__upper-info__date
+          2020/01/08(Tue) 16:00:00
+      .messages__log-message__text
+        こんにちは
+        
+  .form
+    %form.new-message
+      .input-box
+        %input{type:"text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          =icon('fas', 'image')
+          %input{type:"file", class: "input-box__image__file"}
+      %input{type:"submit", class: "submit-btn"}
