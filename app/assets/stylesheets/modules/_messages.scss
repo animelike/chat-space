@@ -6,7 +6,7 @@
   display: flex;
 
   .chat-side {
-    background-color: #253141;
+    background-color: $side_blue_dark;
     width: 300px;
     height: 100vh;
 
@@ -16,7 +16,7 @@
       flex-direction: column; 
       justify-content: center; 
       align-items: center; 
-      color: $font_color;
+      color: $white;
       font-weight: bold;
 
       &__box{
@@ -32,7 +32,7 @@
           justify-content: flex-end;
           li{
             a{
-              color: $font_color;
+              color: $white;
             }
           }
 
@@ -45,11 +45,11 @@
 
     .groups{
       height: calc(100vh - 100px);
-      background-color: #2f3e51;
+      background-color: $side_blue_light;
       padding: 20px 20px 0;
 
       .group{
-        color: $font_color;
+        color: $white;
         text-decoration: none;
         margin-bottom: 40px;
         font-weight: bold;
@@ -69,7 +69,7 @@
   .chat-main {
     width: calc(100vw - 300px);
     height: 100vh;
-    background-color: $font_color;
+    background-color: $white;
 
     .main-header{
       height: 100px;
@@ -83,13 +83,13 @@
         margin-top: 35px;
 
         &__group-name{
-          color: $font_color_nd;
+          color: $black;
           font-size: 20px;
           text-align: center;
         }
 
         &__member-name{
-          color: $font_color_th;
+          color: $light_gray;
           font-size: 12px;
           margin-top: 15px;
         }
@@ -98,7 +98,7 @@
       .edit-btn{
         padding: 0 20px;
         height: 40px;
-        color: #38aef0;
+        color: $light_blue;
         font-size: 16px;
         text-decoration: none;
         border: 1px solid;
@@ -121,13 +121,13 @@
           display: flex;
 
           &__talker{
-            color: $font_color_nd;
+            color: $black;
             font-size: 16px;
             font-weight: bold;
           }
 
           &__date{
-            color: $font_color_th;
+            color: $light_gray;
             font-size: 12px;
             margin-left: 10px;
           }
@@ -174,7 +174,7 @@
         }
 
         .submit-btn{
-          background-color: #38aef0;
+          background-color: $light_blue;
           color: #fafafa;
           height: 50px;
           width: 100px;
