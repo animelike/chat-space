@@ -2,35 +2,20 @@
   .main-header
     .main-header__group-info
       .main-header__group-info__group-name
-        vegetable
+        =@group.name
       .main-header__group-info__member-name
-        member: tomo
-    =link_to "#", class:"edit-btn" do
+        ='Member : ' + @group.users.pluck(:name).join(" ")
+    =link_to edit_group_path(@group), class:"edit-btn" do
       Edit
 
   .messages
-    .messages__log-message
-      .messages__log-message__upper-info
-        .messages__log-message__upper-info__talker
-          tomo 
-        .messages__log-message__upper-info__date
-          2020/01/07(Tue) 15:57:00
-      .messages__log-message__text
-        おはようございます
-    .messages__log-message
-      .messages__log-message__upper-info
-        .messages__log-message__upper-info__talker
-          nano 
-        .messages__log-message__upper-info__date
-          2020/01/08(Tue) 16:00:00
-      .messages__log-message__text
-        こんにちは
-        
+    = render @messages
+
   .form
-    %form.new-message
-      .input-box
-        %input{type:"text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          =icon('fas', 'image')
-          %input{type:"file", class: "input-box__image__file"}
-      %input{type:"submit", class: "submit-btn"}
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form.mask
+        = f.label :image, class: 'form__mask__image' do
+          =icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit-btn'
