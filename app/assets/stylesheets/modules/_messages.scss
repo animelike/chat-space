@@ -153,6 +153,7 @@
         padding: 20px 40px 0 40px;
         display: flex;
       }
+      
       .form__message{
         height: 50px;
         width: calc(100vw - 300px - 220px);
@@ -177,14 +178,14 @@
         
       
 
-        &__submit-btn{
-          background-color: $light_blue;
-          color: #fafafa;
-          height: 50px;
-          width: 100px;
-          margin-left: 15px;
-          cursor: pointer;
-        }
+      &__submit-btn{
+        background-color: $light_blue;
+        color: #fafafa;
+        height: 50px;
+        width: 100px;
+        margin-left: 15px;
+        cursor: pointer;
+      }
     }
   }
 }
