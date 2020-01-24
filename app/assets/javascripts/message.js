@@ -78,7 +78,7 @@ $(function(){
       $('.messages').append(html);
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       $("#new_message")[0].reset();
-      $(".form__submit").prop("disabled", false);
+      $(".form__submit-btn").prop("disabled", false);
     })
     .fail(function(){
       alert("メッセージ送信に失敗しました");
@@ -102,7 +102,7 @@ $(function(){
         $('.messages').append(insertHTML);
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
         $("#new_message")[0].reset();
-        $(".form__submit").prop("disabled", false);
+        $(".form__submit-btn").prop("disabled", false);
       }
     })
     .fail(function() {
